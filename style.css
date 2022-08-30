@@ -1,0 +1,35 @@
+
+.box {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.box--container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons--container{
+    margin-top: 1rem; 
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 50pxpx);
+    justify-content: center;
+    gap: 20px;
+}
+
+.button{
+    padding: 10px;
+    background-color: rebeccapurple;
+    color: white;
+    border: none;
+    transition: border 1s;
+}
+
+.button:hover{
+    outline: 2px solid black;
+}
