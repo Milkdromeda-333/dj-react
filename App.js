@@ -62,7 +62,7 @@ export default function App() {
         );
     }
     
-    // BIG TIME's 1 handler: turns the right bottom box blue
+    // BIG TIME's 1 handler: sets the top left and bottom right colors
     function handleClick5(){
         setColor(prevColor => {return [
             "linear-gradient(90deg, hsla(265, 53%, 29%, 1) 0%, hsla(24, 93%, 73%, 1) 100%)",
@@ -73,7 +73,7 @@ export default function App() {
         );
     }
     
-    // BIG TIME's 1 handler: turns the right bottom box blue
+    // BIG TIME's 2 handler: sets the top right and bottom left colors
     function handleClick6(){
         setColor(prevColor => {return [
             prevColor[0],
@@ -84,7 +84,7 @@ export default function App() {
         );
     }
     
-    // returns an array of Box components
+    // returns an array of Box components to render in the DOM
     let acc = 0 ;
     const boxes = color.map((currentColor) => 
     {
@@ -94,30 +94,23 @@ export default function App() {
         );
     });
     
-
     return (
         <div>
             <div className="box--container">
                  {boxes}
             </div>
             <div className="buttons--container">
-                    <Button handlerFunc={handleClick1} buttonText="Smol DJ" />
-                    <Button handlerFunc={handleClick2} buttonText="Party DJ" /> 
+                  <Button handlerFunc={handleClick1} buttonText="Smol DJ" />
+                  <Button handlerFunc={handleClick2} buttonText="Party DJ" /> 
                     
                     
-                    <Button handlerFunc={handleClick3} buttonText="Blue Left" />
-                    <Button handlerFunc={handleClick4} buttonText="Blue Right" />
+                  <Button handlerFunc={handleClick3} buttonText="Blue Left" />
+                  <Button handlerFunc={handleClick4} buttonText="Blue Right" />
                     
                     
-                    <Button handlerFunc={handleClick5} buttonText="1" />
-                    <Button handlerFunc={handleClick6} buttonText="2" />
-                 </div>
+                  <Button handlerFunc={handleClick5} buttonText="1" />
+                  <Button handlerFunc={handleClick6} buttonText="2" />
+             </div>
         </div>
     );
 }
-/*
-TODO:
-dynamically render the buttons and pas in the onclick function as a prop?
-
-NOTES:
-*/
